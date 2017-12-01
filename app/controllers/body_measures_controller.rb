@@ -1,4 +1,6 @@
 class BodyMeasuresController < ApplicationController
+  before_action :authenticate_user!
+  
   def index
     @body_measures = current_user.body_measures.pluck(:bmi)
   end
