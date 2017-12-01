@@ -39,4 +39,8 @@ module ApplicationHelper
   def active? path
     "active" if current_page? path
   end
+
+  def copyright_generator
+    MggViewTool::Renderer.copyright 'Mauricio García', 'All rights reserved'
+  end
 end
