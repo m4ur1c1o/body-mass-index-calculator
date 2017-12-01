@@ -1,0 +1,2 @@
+module BodyMeasuresHelper
+end
