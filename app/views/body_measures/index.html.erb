@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-sm-12">
+    <h1 class="text-center history-header">View your history</h1>
+
+    <div id="my_graph"></div>
+    <%= javascript_tag do %>
+      <%=
+        graph_generate('my_graph',
+          data: {
+            columns: [
+              ['BMI'] + @body_measures,
+            ]
+          }
+        )
+      %>
+    <% end %>
+</div>
+</div>

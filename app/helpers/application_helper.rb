@@ -19,6 +19,10 @@ module ApplicationHelper
         url: new_body_measure_path,
         title: 'BMI Calculator'
       },
+      {
+        url: body_measures_path,
+        title: 'View history'
+      },
     ]
   end
 

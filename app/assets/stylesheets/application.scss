@@ -1,5 +1,6 @@
 @import "bootstrap";
 @import "gritter";
+@import 'd3c3_rails';
 
 .main-app {
   padding-top: 50px;
@@ -7,4 +8,8 @@
 
 #bmi-result {
   visibility: hidden;
+}
+
+.history-header {
+  padding-bottom: 30px;
 }

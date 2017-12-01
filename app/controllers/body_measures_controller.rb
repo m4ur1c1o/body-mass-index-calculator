@@ -1,4 +1,8 @@
 class BodyMeasuresController < ApplicationController
+  def index
+    @body_measures = current_user.body_measures.pluck(:bmi)
+  end
+
   def new
     @body_measure = BodyMeasure.new
   end
