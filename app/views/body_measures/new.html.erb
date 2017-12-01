@@ -5,6 +5,11 @@
         <h1>BMI Calculator</h1>
 
         <%= form_for @body_measure do |f| %>
+          <% if @body_measure.errors.any? %>
+            <% @body_measure.errors.full_messages.each do |error| %>
+              <%= js add_gritter(error, title: "BMI Calculator Notification", sticky: false) %>
+            <% end %>
+          <% end %>
           <div class="row">
             <div class="col-sm-6">
               <div class="form-group">
