@@ -8,7 +8,8 @@ class BodyMeasuresController < ApplicationController
 
     respond_to do |format|
       if @body_measure.save
-        format.html { redirect_to new_body_measure_path, notice: 'Measure created' }
+        # format.html { redirect_to new_body_measure_path, notice: 'Measure created' }
+        format.js
       else
         format.html { render :new }
       end

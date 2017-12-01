@@ -4,7 +4,7 @@
       <div class="card-body text-center">
         <h1>BMI Calculator</h1>
 
-        <%= form_for @body_measure do |f| %>
+        <%= form_for @body_measure, remote: true do |f| %>
           <% if @body_measure.errors.any? %>
             <% @body_measure.errors.full_messages.each do |error| %>
               <%= js add_gritter(error, title: "BMI Calculator Notification", sticky: false) %>
@@ -28,6 +28,7 @@
           </div>
         <% end %>
       </div>
+      <div class="card-footer text-muted" id="bmi-result"></div>
     </div>
   </div>
 </div>
