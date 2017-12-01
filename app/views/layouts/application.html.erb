@@ -17,6 +17,6 @@
       <%= yield %>
     </div>
 
-    <%= js add_gritter(flash[:notice], title: "BMI Calculator Notification", sticky: false) %>
+    <%= render 'shared/alerts' %>
   </body>
 </html>
